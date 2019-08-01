@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p>function definition stored as a property value.</p>
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+
+var details = {
+  firstName : "Sibi",
+  lastName  : "S",
+  age     : 27,
+  eyeColor  : "black",
+  func: function() {
+    return "My name is"+ "\t"+this.firstName + " and my age is \t" + this.age;
+  }
+};
+
+
+
+
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = details.func();
+
+</script>
+
+</body>
+</html>

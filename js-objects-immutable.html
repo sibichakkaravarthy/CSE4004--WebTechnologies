@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OBject immutabe call</title>
+</head>
+<body>
+
+<p id = "demo"></p>
+
+<script type="text/javascript"> 
+		
+	var author = {
+    name: "Sibi Chakkaravarthy",
+    domain: "Cyber security",
+    age: 50
+	};
+
+Object.freeze(author);
+
+if (Object.isFrozen(author)) {
+    document.write("\n Frozen object attempted for modification!");
+}
+
+
+function announce (author) {
+
+    // Whoops! Assigning the name rather than testing equality!
+    if (author.name = "Sethuraman Raja") {  //  == is equal to (dont care about type), === compares the value (equal value and type)
+        document.write("I am not sibi");
+    } else {
+        document.write(author.name);
+    }
+}
+
+// Outputs: "I am not sibi"
+
+announce(author);
+
+// Outputs: {
+//     name: "Sethuraman Raja",
+//     domain: "Cyber security"
+// }
+console.log(author);
+
+document.getElementById("demo").innerHTML = "My name is " + author.name + "<br /><br />"+ "my domain is " + author.domain +" \t  age is " + author.age;
+
+
+
+	</script>
+
+</body>
+</html>

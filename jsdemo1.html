@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative; /* Change to absolute */
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute; /* Change to relative */
+  background-color: green;
+  
+ /* z-index: 1;
+  
+  top:0px;
+  right:0px; 
+}*/
+
+ /*
+ #animate1 {
+  width: 70px;
+  height: 70px;
+  position: absolute;               
+  background-color: blue;
+  top:0px;
+ left:0px;
+}
+ */
+
+</style>
+<body>
+
+
+
+
+
+<p><button onclick="myMove()">Animate me</button></p> 
+<div id ="container">
+  <div id ="animate"></div>
+  <!--<div id ="animate1"></div> -->
+</div>
+
+
+
+<script>
+function myMove() {
+  var anim = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 4);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      anim.style.top = pos + "px"; 
+      anim.style.right = pos + "px"; 
+    }
+  }
+}
+</script>
+
+</body>
+</html>

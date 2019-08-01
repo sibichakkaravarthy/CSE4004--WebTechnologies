@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<style type="text/css">
+		
+		#demo1::before { 
+  content: "Read this -";
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+}
+
+	</style>
+</head>
+<body>
+
+<p>JavaScript Object - Demo.</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+
+
+details = {
+  firstName : "Sibi",
+  lastName  : "S",
+  age     : 28,
+  eyeColor  : "black"
+};
+
+
+var college = new Object();
+college.name="VITAP";
+college.location="Amaravati";
+college.startyear=2017;
+
+
+document.getElementById("demo").innerHTML = details.firstName + " " + details.lastName;
+document.getElementById("demo1").innerHTML = college.name + " " + college.startyear;
+
+var collegedetails = details;
+collegedetails.eyeColor = "blue";
+
+document.getElementById("demo2").innerHTML = "eye color is "+ details.eyeColor;
+
+
+</script>
+
+</body>
+</html>

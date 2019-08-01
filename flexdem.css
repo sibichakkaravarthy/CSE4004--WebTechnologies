@@ -1,0 +1,28 @@
+html{
+  background-color: red;
+  padding: 10px;
+}
+body{
+    background-color: yellow;
+    padding: 10px;
+    margin:0;
+}
+
+.parent{
+
+	background-color: white;
+	 margin:10px;
+  padding: 10px;
+
+  height: 400px;
+
+  display:flex;
+flex-flow: row-reverse wrap;
+align-items: center;
+justify-content: center;
+}
+
+.div1{
+	background-color: red;
+	order:3;
+}

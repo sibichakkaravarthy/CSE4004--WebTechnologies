@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Javascript demo </title>
+</head>
+<body>
+
+<button id = "sibi">Change color</button>
+
+<p id = "color1"> this tag element will change the color of this tag</p>
+
+<script type="text/javascript">
+	//var btn = document.querySelector('button');
+var btn = document.getElementById('sibi');
+
+//my function definition 
+function random(number) {
+  return Math.floor(Math.random()*(number+1));
+}
+
+btn.onclick = function() {
+
+	var prom = prompt("Please enter your age"); 
+	var myElement = document.getElementById('color1');
+  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+
+  
+  //var rndCol1 = 'rgb(' + random(10) + ',' + random(2) + ',' + random(55) + ')';
+
+  document.body.style.backgroundColor = rndCol;
+  //color1.style.color = "red";
+  myElement.style.color = prom;
+}
+
+</script>
+
+</body>
+</html>

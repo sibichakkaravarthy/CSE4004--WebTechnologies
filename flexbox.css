@@ -1,0 +1,116 @@
+html{
+  background-color: red;
+  padding: 10px;
+}
+
+
+body{
+    background-color: yellow;
+    padding: 10px;
+    margin:0;
+}
+
+/*@media{
+
+  min-width:468px;
+
+}
+
+/*flexbox */
+
+.parent{
+
+  background-color: #f073e1;
+  margin:10px;
+  padding: 10px;
+
+  height: 400px;
+  display: flex; /*flex and inline-flex ---- inspect element in browser*/
+  flex-flow: row-reverse wrap; /*column and reverse-column; row and reverse-row*/ /* wrap */ /*wrap-reverse */
+
+
+  align-items: stretch; /* center, baseline*/ /* how the elements are displayed - refers to cross axis*/
+
+  justify-content: center; /*space-between, flex-start and flex-end */ /* - refers to the main axis */
+
+  align-content: center; /* --- inspect element in browser*/
+  
+
+}
+
+.parent div{
+  padding: 20px;
+  }
+
+  
+.div7{
+
+width:19%; /* flex-basis*/
+
+
+}
+
+.div1{
+  flex:1;
+  background-color:  #f800db
+  margin: 5px;
+
+}
+
+.div2 {
+   flex:1;
+    background-color: #f800db;
+    margin: 5px;
+    width: 150px;
+    font-size: 30px;
+    order: 2
+}
+
+.div3 {
+   flex:1;
+    background-color: #f800db;
+    margin: 5px;
+    height: 150px;
+    order:5;
+}
+
+.div4 {
+   flex:1;
+    background-color: #f800db;
+    margin: 5px;
+    width: 150px;
+    height: 150px;         
+}
+
+.div5 {
+   flex:1;
+    background-color: #f800db;
+    margin: 5px;
+    width: 200px;           
+}
+
+.div6 {
+   flex:1;
+    background-color: #f800db;
+    margin: 5px;
+    width: 200px;
+}
+
+/*
+
+.parent1 div {
+  border: 1px solid black; 
+  padding: 20px;
+
+}
+
+.parent1{
+
+  display: flex;
+
+
+  
+  justify-content: space-between;
+}
+
+*/
