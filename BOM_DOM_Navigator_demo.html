@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <style>
+        .btn {
+            border-radius: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="bg-info py-5">
+        <div class="container overflow-hidden">
+            <h1 class="my-5">BOM DOM DEMO</h1>
+            <button type="button" class="btn btn-success" onclick="getData()">Get Data</button>
+
+            <h4 id="response" class="my-2"></h4>
+            <p id="demo"></p>
+             <p id="demo1"></p>
+             <p id="demo2"></p>
+             <p id="browserengine"></p>
+             <p id="browserversion"></p>
+             <p id ="useragent"></p>
+             <p id = "checkbrowseronline"></p>
+             <p id="browserlang"></p>
+        </div>
+
+        </div>
+
+        <script>
+            function getData() {
+                document.getElementById("response").innerHTML = "Browser name: " + navigator.appName +
+                    "<br>OS Architecture: " + navigator.platform + "<br> Browser version: " + navigator.appVersion +
+                    "<br>Document inner Width: " + innerWidth + "<br>Document inner Height: " + innerHeight +
+                    "<br>Color Depth: " + screen.colorDepth + "<br>Pixel Depth: " + screen.pixelDepth;
+                    document.getElementById("demo").innerHTML =
+"navigator.cookieEnabled is " + navigator.cookieEnabled;
+document.getElementById("demo1").innerHTML = 
+"navigator.appName is " + navigator.appName;
+document.getElementById("demo2").innerHTML =
+"navigator.appCodeName is " + navigator.appCodeName;
+document.getElementById("browserengine").innerHTML =
+"navigator.product is " + navigator.product;
+document.getElementById("browserversion").innerHTML = navigator.appVersion;
+document.getElementById("useragent").innerHTML = navigator.userAgent;
+document.getElementById("checkbrowseronline").innerHTML = navigator.onLine;
+document.getElementById("browserlang").innerHTML = navigator.language;
+
+
+            }
+        </script>
+    </section>
+
+
+</body>
+
+</html>
