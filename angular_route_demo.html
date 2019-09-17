@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+<body ng-app="myApp">
+
+<p><a href="#/!">VITAP</a></p>
+
+<a href="#!ab1">AB 1</a>
+<a href="#!ab2">AB2 2</a>
+
+<p>Click are active.</p>
+
+<div ng-view></div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.html"
+    })
+    .when("/ab1", {
+        templateUrl : "ab1.html"
+        controller : "ab1Ctrl"
+    })
+    .when("/ab2", {
+        templateUrl : "ab2.html"
+        controller : "ab2Ctrl"
+    });
+});
+app.controller("ab1Ctrl", function ($scope) {
+    $scope.msg = "Hi VITian";
+});
+app.controller("ab2Ctrl", function ($scope) {
+    $scope.msg = "Hi VITapian";
+});
+</script>
+
+</body>
+</html>

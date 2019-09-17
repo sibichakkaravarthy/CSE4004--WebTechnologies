@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Title</title>
+ <meta charset="UTF-8" />
+ <style media="screen"></style> 
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ </head>
+ <body>
+ <div ng-app>
+<!-- store the value of input field into a variable name -->
+<p>Name: <input type="text" ng-model="name"></p>
+<!-- display the variable name inside (innerHTML) of p -->
+<p ng-bind="name"></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Title</title>
+ <meta charset="UTF-8" />
+ <style media="screen"></style>
+ <script src="https://ajax.googleapis.com/
+ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+</head>
+<body>
+<div data-ng-app="myApp" data-ng-controller="NumberCtrl">
+<p>Number: <input type="number" ng-model="number" style="background-color: blue;"></p>
+<p>Number = {{ number }}</p>
+<button ng-click="showNumber()">Show Number</button>
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('NumberCtrl', function($scope) {
+    $scope.number = 1;
+    $scope.showNumber = function(){
+       window.alert( "your number= " + $scope.number );
+    };
+});
+</script>
+</body>
+</html>
+
+

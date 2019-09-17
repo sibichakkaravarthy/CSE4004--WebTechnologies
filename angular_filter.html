@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html data-ng-app="">
+ <head>
+ <title>Title</title>
+ <meta charset="UTF-8" />
+ <style media="screen"></style>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ </head>
+ <body>
+<div data-ng-init="customers = [{name:'Sibi', id: '70084'}, {name:'Chakkaravarthy', id:'70086'}]">
+<h1>looping!</h1>
+<ul>
+<li data-ng-repeat="customer in customers | orderBy:'name'">
+{{ custome }}</li>
+</ul>
+</div>
+</body>
+</html>
+
