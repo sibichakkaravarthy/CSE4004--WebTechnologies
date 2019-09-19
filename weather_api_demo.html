@@ -9,7 +9,7 @@
 			var url = "http://api.openweathermap.org/data/2.5/forecast?id=1253184&APPID=bf37e0bdc8114a593035938165a47fcf";
 
 			myXMLHttpRequest.onreadystatechange = function() {
-				if (myXMLHttpRequest.readyState === 4 && myXMLHttpRequest.status === 200) 
+			if (myXMLHttpRequest.readyState === 4 && myXMLHttpRequest.status === 200) 
 				{
 					// the JSON response deserialized 
 					var myObject = JSON.parse(myXMLHttpRequest.responseText);
